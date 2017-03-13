@@ -15,6 +15,7 @@ RUN cp /usr/lib/syslinux/modules/bios/ldlinux.c32 /var/lib/tftpboot
 RUN cp /usr/lib/syslinux/modules/bios/libutil.c32 /var/lib/tftpboot
 RUN cp /usr/lib/syslinux/modules/bios/menu.c32 /var/lib/tftpboot
 ADD default /var/lib/tftpboot/pxelinux.cfg
+ADD startup.sh /
 VOLUME /var/lib/tftpboot
 EXPOSE 69/udp
-CMD /usr/sbin/in.tftpd -L --user root -a 0.0.0.0:69 -s -B1468 -v /var/lib/tftpboot
+CMD startup.sh

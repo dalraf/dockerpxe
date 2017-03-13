@@ -5,3 +5,5 @@ services:
       image: pxeimg
       restart: unless-stopped
       network_mode: "host"
+      environment:
+        - SERVIDORPXE=${servidorpxe}
