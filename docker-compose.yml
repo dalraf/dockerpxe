@@ -1,0 +1,6 @@
+version: '2'
+services:
+    dockerpxe:
+      build: ./pxeimg
+      image: pxeimg
+      restart: unless-stopped
