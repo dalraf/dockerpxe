@@ -1,0 +1,10 @@
+DEFAULT menu.c32
+PROMPT 0
+MENU TITLE Lista
+
+label Clonezilla
+      MENU DEFAULT
+      MENU LABEL Clonezilla
+      kernel clonezilla/vmlinuz
+      append initrd=clonezilla/initrd.img boot=live live-config noswap nolocales edd=on nomodeset ocs_live_run="ocs-live-general" ocs_live_extra_param="" ocs_live_keymap="" ocs_live_batch="no" ocs_lang="" vga=788 nosplash fetch=tftp://192.168.0.251/clonezilla/filesystem.squashfs
+
