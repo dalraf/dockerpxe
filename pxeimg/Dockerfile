@@ -18,4 +18,4 @@ ADD default /var/lib/tftpboot/pxelinux.cfg
 ADD startup.sh /
 VOLUME /var/lib/tftpboot
 EXPOSE 69/udp
-CMD startup.sh
+CMD /startup.sh
