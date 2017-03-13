@@ -4,5 +4,4 @@ services:
       build: ./pxeimg
       image: pxeimg
       restart: unless-stopped
-      ports:
-        - 69:69
+      network_mode: "host"
